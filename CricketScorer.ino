@@ -18,7 +18,7 @@ decode_results results;
 
 #include <LiquidCrystal.h> //include the library code
 
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //delcare the lcds pins
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2); //declare the lcds pins
 
 void setup() {
   pinMode(9, INPUT); //declare pin 9 as input
@@ -56,41 +56,41 @@ void loop() {
  {
     switch(results.value) {
 {
-  case 0x4F09DFF1: //add your own remote value
+  case 0x4F09DFF1: //add your own remote value for '0'
     score += 0; //add no runs
     balls ++; //add a ball
     break;
     
-  case 0xE8289565: //add your own remote value
+  case 0xE8289565: //add your own remote value for '1'
     score += 1; //add 1 run
     balls ++; //add 1 ball
     break;
 
-  case 0x66800DCD: //add your own remote value
+  case 0x66800DCD: //add your own remote value for '2'
     score += 2; //add 2 runs
     balls ++; //add 1 ball
     break;
     
-  case 0xC03CA26F: //add your own remote value
+  case 0xC03CA26F: //add your own remote value for '3'
     score += 3; //add 3 runs 
     balls ++; //add 1 ball
     break;
 
-  case 0x490541DF: //add your own remote value
+  case 0x490541DF: //add your own remote value for '4'
     score += 4; //add 4 runs
     balls ++; //add 1 ball
     break;
 
-  case 0xB1CE824B: //add your own remote value
+  case 0xB1CE824B: //add your own remote value for '5'
     score += 5; //add 5 runs
     balls ++; //add 1 ball
     break;
 
-  case 0x6F6EBBF3: //add your own remote value
+  case 0x6F6EBBF3: //add your own remote value '6'
     score += 6; //add 6 runs
     balls ++; //add 1 ball
     break;
-  case 0x335A607E://add your own remote value
+  case 0x335A607E://add your own remote value for 'reset' I used the'delete' button
   pinMode(9, OUTPUT); //reset the arduino
   digitalWrite(9, LOW); //reset the arduino
   break;
